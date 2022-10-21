@@ -5,5 +5,6 @@ class MonstersController < ApplicationController
 
   def show
     @monster = Monster.find(params[:id])
+    @tweet = Tweet.where(params[:monster_id])
   end
 end
